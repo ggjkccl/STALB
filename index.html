@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WhatsApp Redirect</title>
+<script>
+  // List of WhatsApp links
+  const links = [
+    "https://wa.me/12296002546",
+    "https://wa.me/13466885305",
+    "https://wa.me/12316264901",
+    "https://wa.me/17746122864",
+    "https://wa.me/14707982637",
+    "https://wa.me/16065593855",
+    "https://wa.me/16314195176",
+    "https://wa.me/15098000632",
+    "https://wa.me/17828558652",
+    "https://wa.me/12313970885",
+    "https://wa.me/16398548464",
+    "https://wa.me/17865631903",
+    "https://wa.me/19513272879",
+    "https://wa.me/12267693675",
+    "https://wa.me/13186278902",
+    "https://wa.me/19783618369",
+    "https://wa.me/15878206889",
+    "https://wa.me/17753624190",
+    "https://wa.me/17815182824",
+    "https://wa.me/18459671025",
+    "https://wa.me/16134653679",
+    "https://wa.me/13435771366"
+  ];
+
+  // Get current index from localStorage, default to 0
+  let index = parseInt(localStorage.getItem("waIndex") || "0");
+
+  // Redirect immediately
+  window.location.replace(links[index]);
+
+  // Update index for next visit
+  localStorage.setItem("waIndex", (index + 1) % links.length);
+</script>
+</head>
+<body>
+<p>Redirecting to WhatsApp...</p>
+</body>
+</html>
